@@ -44,7 +44,7 @@ rm -rf %{buildroot}
 
 
 %changelog
-* Wed Apr 17 2018 Jamie Curnow <jc@jc21.com> - 11.0.1-1
+* Wed Apr 17 2019 Jamie Curnow <jc@jc21.com> - 11.0.1-1
 - v11.0.1
 
 * Tue Sep 11 2018 Jamie Curnow <jc@jc21.com> - 0.10.0-1
