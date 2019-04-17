@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name:           ripgrep
-Version:        0.10.0
+Version:        11.0.1
 Release:        1%{?dist}
 Summary:        ripgrep recursively searches directories for a regex pattern
 Group:          Applications/System
@@ -44,6 +44,9 @@ rm -rf %{buildroot}
 
 
 %changelog
+* Wed Apr 17 2018 Jamie Curnow <jc@jc21.com> - 11.0.1-1
+- v11.0.1
+
 * Tue Sep 11 2018 Jamie Curnow <jc@jc21.com> - 0.10.0-1
 - 0.10.1
 
