@@ -1,0 +1,7 @@
+{
+  "publish": {
+    "PACKAGE": "ripgrep",
+    "GH_USER": "jc21-rpm",
+    "VERSION": "11.0.2"
+  }
+}
