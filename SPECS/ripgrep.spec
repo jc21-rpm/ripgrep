@@ -1,12 +1,13 @@
 %global debug_package %{nil}
 
 Name:           ripgrep
-Version:        11.0.2
+Version:        13.0.0
 Release:        1%{?dist}
 Summary:        ripgrep recursively searches directories for a regex pattern
 Group:          Applications/System
 License:        GPLv2
 URL:            https://github.com/BurnSushi/%{name}
+Source:         https://github.com/BurntSushi/%{name}/archive/%{version}.tar.gz
 BuildRequires:  cmake
 %{?el7:BuildRequires: cargo, rust}
 
@@ -18,32 +19,28 @@ available for every release. ripgrep is similar to other popular search tools
 like The Silver Searcher, ack and grep.
 
 %prep
-wget https://github.com/BurntSushi/%{name}/archive/%{version}.tar.gz
-tar xzf %{version}.tar.gz
-
+%setup -q -n %{name}-%{version}
 
 %build
-cd %{name}-%{version}
 cargo build --release
-
 
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}
-install -D -m 755 %{name}-%{version}/target/release/rg %{buildroot}/usr/bin/rg
-
+install -D -m 755 target/release/rg %{buildroot}/usr/bin/rg
 
 %clean
 rm -rf %{buildroot}
 
-
 %files
 %defattr(-,root,root,-)
-%doc %{name}-%{version}/LICENSE-MIT %{name}-%{version}/*.md
+%doc LICENSE-MIT *.md
 /usr/bin/rg
 
-
 %changelog
+* Sun Jun 20 2021 Jamie Curnow <jc@jc21.com> - 13.0.0-1
+- v13.0.0
+
 * Fri Aug 2 2019 Jamie Curnow <jc@jc21.com> - 11.0.2-1
 - v11.0.2
 
