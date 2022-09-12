@@ -2,7 +2,7 @@
 
 Name:           ripgrep
 Version:        13.0.0
-Release:        1%{?dist}
+Release:        1
 Summary:        ripgrep recursively searches directories for a regex pattern
 Group:          Applications/System
 License:        GPLv2
