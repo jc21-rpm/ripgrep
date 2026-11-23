@@ -3,6 +3,6 @@
   "publish": {
     "PACKAGE": "ripgrep",
     "GH_USER": "jc21-rpm",
-    "VERSION": "15.2.0"
+    "VERSION": "16.0.0"
   }
 }
